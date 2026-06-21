@@ -1,0 +1,224 @@
+{
+  "ApiVersion": "1.0.0",
+  "Timestamp": "2025-02-15T16:52:09.3134708Z",
+  "Flags": "Indicator, SourceIncluded",
+  "TargetFramework": "net6.0",
+  "Store": {
+    "SourceIncluded": false,
+    "Title": null,
+    "DistributionType": null,
+    "Type": null,
+    "AlgorithmId": null,
+    "AuthorId": null,
+    "UserId": null,
+    "HashSum": null,
+    "ContentHashSum": "d01227ef1c71c2dfc42a01bfcde6dd19"
+  },
+  "Types": [
+    {
+      "Flags": "Indicator",
+      "Guid": "00000000-0000-0000-0000-000000000000",
+      "Group": "Custom",
+      "FriendlyName": "ModifiedSmoothedHeikinAshi",
+      "ShortName": null,
+      "TypeName": "cAlgo.ModifiedSmoothedHeikinAshi",
+      "AssemblyName": "Heikin Ashi Kunzendorf new, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "TimeZone": "UTC",
+      "IsOverlay": true,
+      "IsPercentage": false,
+      "ScalePrecision": null,
+      "Levels": [],
+      "DefaultSymbolName": null,
+      "DefaultTimeFrame": null,
+      "Video": null,
+      "Lines": [
+        {
+          "Name": "Upper BB",
+          "Style": "Solid",
+          "PlotType": "Line",
+          "Thickness": 1.0,
+          "Color": "#800001FF",
+          "PropertyName": "UpperBB",
+          "IsUsedInAutoScale": true,
+          "IsColorCustomizable": true,
+          "IsLastValueVisibleInTitle": true
+        },
+        {
+          "Name": "Lower BB",
+          "Style": "Solid",
+          "PlotType": "Line",
+          "Thickness": 1.0,
+          "Color": "#005727FF",
+          "PropertyName": "LowerBB",
+          "IsUsedInAutoScale": true,
+          "IsColorCustomizable": true,
+          "IsLastValueVisibleInTitle": true
+        },
+        {
+          "Name": "Basis",
+          "Style": "Solid",
+          "PlotType": "Line",
+          "Thickness": 1.0,
+          "Color": "#FFD700FF",
+          "PropertyName": "Basis",
+          "IsUsedInAutoScale": true,
+          "IsColorCustomizable": true,
+          "IsLastValueVisibleInTitle": true
+        },
+        {
+          "Name": "Upper HA",
+          "Style": "Solid",
+          "PlotType": "Line",
+          "Thickness": 1.0,
+          "Color": "#00BFFFFF",
+          "PropertyName": "UpperHA",
+          "IsUsedInAutoScale": true,
+          "IsColorCustomizable": true,
+          "IsLastValueVisibleInTitle": true
+        },
+        {
+          "Name": "Lower HA",
+          "Style": "Solid",
+          "PlotType": "Line",
+          "Thickness": 1.0,
+          "Color": "#FF69B4FF",
+          "PropertyName": "LowerHA",
+          "IsUsedInAutoScale": true,
+          "IsColorCustomizable": true,
+          "IsLastValueVisibleInTitle": true
+        }
+      ],
+      "Clouds": [],
+      "Parameters": [
+        {
+          "MinValue": -2147483648,
+          "MaxValue": 2147483647,
+          "Step": 1,
+          "DefaultValue": 10,
+          "ParameterType": "Integer",
+          "PropertyName": "Period",
+          "FriendlyName": "Period",
+          "GroupName": "HA Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "MinValue": 1,
+          "MaxValue": 2147483647,
+          "Step": 1,
+          "DefaultValue": 20,
+          "ParameterType": "Integer",
+          "PropertyName": "BBLength",
+          "FriendlyName": "BB Length",
+          "GroupName": "HA BB Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "MinValue": 0.001,
+          "MaxValue": 50.0,
+          "Step": 0.1,
+          "DefaultValue": 2.0,
+          "ParameterType": "Double",
+          "PropertyName": "BBStdDev",
+          "FriendlyName": "BB StdDev",
+          "GroupName": "HA BB Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "EnumValues": {
+            "Simple": 0,
+            "Exponential": 1,
+            "TimeSeries": 2,
+            "Triangular": 3,
+            "VIDYA": 4,
+            "Weighted": 5,
+            "WilderSmoothing": 6,
+            "Hull": 7,
+            "DoubleExponential": 8,
+            "TripleExponential": 9,
+            "KaufmanAdaptive": 10
+          },
+          "DefaultValue": 0,
+          "ParameterType": "Enum",
+          "PropertyName": "MaType",
+          "FriendlyName": "BB MaType",
+          "GroupName": "HA BB Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "EnumValues": {
+            "Draw_Candle": 0,
+            "High_Low_Ma": 1,
+            "Open_Close_Ma": 2
+          },
+          "DefaultValue": 1,
+          "ParameterType": "Enum",
+          "PropertyName": "Style",
+          "FriendlyName": "Opacity",
+          "GroupName": "Style Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "MinValue": -2147483648,
+          "MaxValue": 2147483647,
+          "Step": 1,
+          "DefaultValue": 150,
+          "ParameterType": "Integer",
+          "PropertyName": "Opacity",
+          "FriendlyName": "Opacity",
+          "GroupName": "Candle Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "MinValue": -2147483648,
+          "MaxValue": 2147483647,
+          "Step": 1,
+          "DefaultValue": 5,
+          "ParameterType": "Integer",
+          "PropertyName": "Size",
+          "FriendlyName": "Size",
+          "GroupName": "Candle Setting",
+          "IsValueVisibleInTitle": true
+        },
+        {
+          "DefaultValue": "#00BFFFFF",
+          "ParameterType": "Color",
+          "PropertyName": "UpColor",
+          "FriendlyName": "Up Color",
+          "GroupName": "Candle Setting",
+          "IsValueVisibleInTitle": false
+        },
+        {
+          "DefaultValue": "#FF69B4FF",
+          "ParameterType": "Color",
+          "PropertyName": "DownColor",
+          "FriendlyName": "Down Color",
+          "GroupName": "Candle Setting",
+          "IsValueVisibleInTitle": false
+        },
+        {
+          "DefaultValue": "#800080FF",
+          "ParameterType": "Color",
+          "PropertyName": "IndecisiveColor",
+          "FriendlyName": "Indecisive Color",
+          "GroupName": "Candle Setting",
+          "IsValueVisibleInTitle": false
+        },
+        {
+          "MinValue": 1.0,
+          "MaxValue": 50.0,
+          "Step": 0.1,
+          "DefaultValue": 10.0,
+          "ParameterType": "Double",
+          "PropertyName": "IndecisiveThreshold",
+          "FriendlyName": "Indecisive Threshold (%)",
+          "GroupName": "Candle Setting",
+          "IsValueVisibleInTitle": true
+        }
+      ],
+      "Capabilities": [],
+      "CustomAttributes": [],
+      "Sets": [],
+      "AddIndicatorsToChart": false
+    }
+  ]
+}
