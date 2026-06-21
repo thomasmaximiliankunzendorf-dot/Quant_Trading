@@ -1,5 +1,6 @@
 # Quant_Trading
 Some insights into my quant trading approaches and backtesting results
+___________________________________
 Introduction presentation slides
 
 <img width="2970" height="1497" alt="quant1" src="https://github.com/user-attachments/assets/5117c70b-846d-4f88-b3b1-37d66e01fb16" />
